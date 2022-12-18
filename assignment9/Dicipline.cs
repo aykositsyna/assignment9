@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace assignment9
 {
-    internal class Dicipline
+    abstract class Dicipline
     {
+        public string Name { get; set; }
+        public abstract string Check(Student student);
     }
 }

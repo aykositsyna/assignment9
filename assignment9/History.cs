@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static assignment9.Dicipline;
 
 namespace assignment9
 {
-    internal class History
+    internal class History : Dicipline
     {
     }
 }

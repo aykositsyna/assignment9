@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace assignment9
 {
-    internal class Mathematics
+    internal class Mathematics : Dicipline
     {
     }
 }
