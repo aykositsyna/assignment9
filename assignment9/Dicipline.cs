@@ -10,5 +10,7 @@ namespace assignment9
     {
         public string Name { get; set; }
         public abstract string Check(Student student);
+        public Dicipline()
+        { }
     }
 }
