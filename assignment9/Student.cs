@@ -8,5 +8,8 @@ namespace assignment9
 {
     internal class Student
     {
+        public string Name { get; set; }
+        public Dictionary<Dicipline, int> Practice = new Dictionary<Dicipline, int>();
+        public Dictionary<Dicipline, int> FinalControl = new Dictionary<Dicipline, int>();
     }
 }
