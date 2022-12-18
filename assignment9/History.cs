@@ -9,5 +9,9 @@ namespace assignment9
 {
     internal class History : Dicipline
     {
+        public override string Check(Student student)
+        {
+
+        }
     }
 }

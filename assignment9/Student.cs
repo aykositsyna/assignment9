@@ -11,5 +11,7 @@ namespace assignment9
         public string Name { get; set; }
         public Dictionary<Dicipline, int> Practice = new Dictionary<Dicipline, int>();
         public Dictionary<Dicipline, int> FinalControl = new Dictionary<Dicipline, int>();
+
+
     }
 }

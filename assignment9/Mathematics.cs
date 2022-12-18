@@ -8,5 +8,9 @@ namespace assignment9
 {
     internal class Mathematics : Dicipline
     {
+        public override string Check(Student student)
+        {
+
+        }
     }
 }
