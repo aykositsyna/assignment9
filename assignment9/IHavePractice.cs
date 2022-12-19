@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace assignment9
 {
-    internal interface IHavePractice
+    interface IHavePractice
     {
-        const int PracticeCount = 0;
+        int PracticeCount { get; set; }
     }
 }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace assignment9
 {
-    internal interface IHaveFinalControl
+    interface IHaveFinalControl
     {
-        const int PassingScore = 3;
+        int PassingScore { get; set; }
     }
 }

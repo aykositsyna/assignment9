@@ -6,14 +6,21 @@ using System.Threading.Tasks;
 
 namespace assignment9
 {
-    internal class Mathematics : Dicipline
+    internal class Mathematics : Dicipline, IHaveFinalControl
     {
+        public int PassingScore { get; set; }
+        public Mathematics()
+        {
+            PassingScore = 3;
+            Name = "Mathematics";
+        }
+
         public override string Check(Student student)
         {
             int studentExam;
             student.FinalControl.TryGetValue(this, out studentExam);
 
-            if (studentExam >= IHaveFinalControl.PassingScore)
+            if (studentExam >= PassingScore)
             {
                 return (student.Name + " scored enough points and gets autopass for " + this.Name);
             }
