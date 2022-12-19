@@ -9,7 +9,7 @@ namespace assignment9
     internal class Student
     {
         public string Name;
-        public Dictionary<Dicipline, int> Practice;
+        public Dictionary<Dicipline, int> Practices;
 
         public Dictionary<Dicipline, int> FinalControl;
 

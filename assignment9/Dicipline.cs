@@ -10,9 +10,5 @@ namespace assignment9
     {
         public string Name;
         public abstract string Check(Student student);
-        public Dicipline(string _name)
-        { 
-            Name = _name;
-        }
     }
 }
