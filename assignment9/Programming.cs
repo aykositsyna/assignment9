@@ -12,7 +12,7 @@ namespace assignment9
         public int PassingScore { get; set; }
         public Programming()
         {
-            PracticeCount = 9;
+            PracticeCount = 5;
             PassingScore = 3;
             Name = "Programming";
         }
@@ -20,30 +20,32 @@ namespace assignment9
 
         public override string Check(Student student)
         {
+            string result = "";
             int studentPractice;
             student.Practices.TryGetValue(this, out studentPractice);
 
             if (studentPractice >= PracticeCount)
             {
-                return (student.Name + " submitted enough assignments and gets autopass for " + this.Name);
+                result += (student.Name + " submitted enough assignments and gets autopass for " + this.Name);
             }
             else
             {
-                return (student.Name + " didn't submit enough assignments and doesn't get autopass for " + this.Name + " :(");
+                result += (student.Name + " didn't submit enough assignments and doesn't get autopass for " + this.Name + " :(\n");
+                int studentExam;
+                student.FinalControl.TryGetValue(this, out studentExam);
+
+                if (studentExam >= PassingScore)
+                {
+                    result += (student.Name + " scored enough points and gets autopass for " + this.Name);
+                }
+                else
+                {
+                    result += (student.Name + " didn't score enough points and doesn't get autopass for " + this.Name + " :(");
+                }
             }
 
-            int studentExam;
-            student.FinalControl.TryGetValue(this, out studentExam);
 
-            if (studentExam >= PassingScore)
-            {
-                return (student.Name + " scored enough points and gets autopass for " + this.Name);
-            }
-            else
-            {
-                return (student.Name + " didn't score enough points and doesn't get autopass for " + this.Name + " :(");
-            }
-
+            return result;
         }
 
     }

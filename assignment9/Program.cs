@@ -39,17 +39,17 @@ namespace assignment9
 
             }
 
-            Console.WriteLine("History\n------------------");
-            diciplines[2].Check(students[0]);
-            Console.WriteLine("Mathematics\n------------------");
+            Console.WriteLine("\nHistory\n------------------");
+            Console.WriteLine(diciplines[2].Check(students[0]));
+            Console.WriteLine("\nMathematics\n------------------");
             foreach (Student student in students)
             {
-                diciplines[1].Check(student);
+                Console.WriteLine(diciplines[1].Check(student));
             }
-            Console.WriteLine("Programming\n------------------");
+            Console.WriteLine("\nProgramming\n------------------");
             foreach (Student student in students)
             {
-                diciplines[0].Check(student);
+                Console.WriteLine(diciplines[0].Check(student));
             }
 
         }
