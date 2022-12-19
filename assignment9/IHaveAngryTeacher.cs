@@ -8,5 +8,6 @@ namespace assignment9
 {
     internal interface IHaveAngryTeacher
     {
+        static string fu = " teacher doesn't allow autopass! >:( ";
     }
 }

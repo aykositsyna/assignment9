@@ -7,11 +7,11 @@ using static assignment9.Dicipline;
 
 namespace assignment9
 {
-    internal class History : Dicipline
+    internal class History : Dicipline, IHaveAngryTeacher
     {
         public override string Check(Student student)
         {
-
+            return (this.Name + IHaveAngryTeacher.fu);
         }
     }
 }
