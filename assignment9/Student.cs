@@ -16,7 +16,7 @@ namespace assignment9
         public Student(string name, Dictionary<Dicipline, int> practice, Dictionary<Dicipline, int> finalControl)
         {
             Name = name;
-            Practice = practice;
+            Practices = practice;
             FinalControl = finalControl;
         }
     }

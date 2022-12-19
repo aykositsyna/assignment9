@@ -23,7 +23,7 @@ namespace assignment9
             Random random = new Random();
             Array values1 = Enum.GetValues(typeof(Names));
 
-            for (int i=0; i < students.Length; i++)
+            for (int i = 0; i < students.Length; i++)
             {
                 string randomName = ((Names)values1.GetValue(random.Next(values1.Length))).ToString();
                 Dictionary<Dicipline, int> Practices = new Dictionary<Dicipline, int>()
@@ -36,7 +36,22 @@ namespace assignment9
                     {diciplines[1], random.Next(0, 5) },
                 };
                 students[i] = new Student(randomName, Practices, FinalControl);
+
             }
+
+            Console.WriteLine("History\n------------------");
+            diciplines[2].Check(students[0]);
+            Console.WriteLine("Mathematics\n------------------");
+            foreach (Student student in students)
+            {
+                diciplines[1].Check(student);
+            }
+            Console.WriteLine("Programming\n------------------");
+            foreach (Student student in students)
+            {
+                diciplines[0].Check(student);
+            }
+
         }
     }
 }
