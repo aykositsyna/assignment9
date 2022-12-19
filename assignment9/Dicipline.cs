@@ -8,9 +8,11 @@ namespace assignment9
 {
     abstract class Dicipline
     {
-        public string Name { get; set; }
+        public string Name;
         public abstract string Check(Student student);
-        public Dicipline()
-        { }
+        public Dicipline(string _name)
+        { 
+            Name = _name;
+        }
     }
 }

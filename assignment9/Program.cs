@@ -11,8 +11,32 @@ namespace assignment9
     {
         public static void Main(string[] args)
         {
+            Dicipline[] diciplines = new Dicipline[3]
+            {
+                new Programming(),
+                new Mathematics(),
+                new History()
+            };
+
             Student[] students = new Student[5];
-            Dicipline[] diciplines = new Dicipline[3];
+
+            Random random = new Random();
+            Array values1 = Enum.GetValues(typeof(Names));
+
+            for (int i=0; i < students.Length; i++)
+            {
+                string randomName = ((Names)values1.GetValue(random.Next(values1.Length))).ToString();
+                Dictionary<Dicipline, int> Practices = new Dictionary<Dicipline, int>()
+                {
+                    {diciplines[0], random.Next(0, 9) }
+                };
+                Dictionary<Dicipline, int> FinalControl = new Dictionary<Dicipline, int>()
+                {
+                    {diciplines[0], random.Next(0, 5) },
+                    {diciplines[1], random.Next(0, 5) },
+                };
+                students[i] = new Student(randomName, Practices, FinalControl);
+            }
         }
     }
 }
