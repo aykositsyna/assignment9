@@ -8,6 +8,6 @@ namespace assignment9
 {
     internal interface IHaveFinalControl
     {
-        int PassingScore { get; set; }
+        const int PassingScore = 3;
     }
 }

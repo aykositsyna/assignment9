@@ -21,6 +21,19 @@ namespace assignment9
             {
                 return (student.Name + " didn't submit enough assignments and doesn't get autopass for " + this.Name + " :(");
             }
+
+            int studentExam;
+            student.FinalControl.TryGetValue(this, out studentExam);
+
+            if (studentExam >= IHaveFinalControl.PassingScore)
+            {
+                return (student.Name + " scored enough points and gets autopass for " + this.Name);
+            }
+            else
+            {
+                return (student.Name + " didn't score enough points and doesn't get autopass for " + this.Name + " :(");
+            }
+
         }
 
     }
